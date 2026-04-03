@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = "dist"
 
+[[redirects]]
+  from = "https://sinus.nz/*"
+  to = "https://entallergy.nz/#nose"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
