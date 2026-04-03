@@ -53,6 +53,17 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 - Condition images: `public/images/conditions/` (jpg versions used, png versions exist but unused)
 - Logo/favicon: `public/images/logo/favicon.png`
 
+## Design Decisions (from prior session)
+- Hero image is intentionally **black & white** — distinctive against colour-heavy competitor sites; green CTA button pops more against monochromatic background
+- Condition category cards use David sculpture JPG images with black backgrounds (not transparent PNGs) — black provides more visual weight, prevents washed-out look
+- Logo in nav uses CSS `invert` filter to make black SVG appear white on dark nav — no separate white logo file needed
+- Logo is a trademark registered in New Zealand — no ™/® symbol added to site (not legally required)
+- Nav logo file: `ENTA logo solid tragus_Black on transparent large text.svg` with `class="h-14 w-auto invert"`
+- Nose condition image uses `object-[center_75%]` crop (not default center — too much top; not bottom — too much lip)
+- FAQ section appears before Request/Consult section in page order (matches nav order)
+- `scroll-margin-top: 64px` applied to all `section[id]` to offset fixed nav header
+- Unused working files (PSDs, alternate headshots, raw images) remain in project root — not served, just not cleaned up
+
 ## Known Issues / Design Decisions
 - `bg-fixed` (CSS parallax) disabled on mobile due to iOS Safari bug — JS parallax used instead (in `Hero.astro`)
 - Hamburger menu uses CSS peer checkbox pattern — checkbox must be a direct sibling of the mobile menu div
