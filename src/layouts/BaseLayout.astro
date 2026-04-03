@@ -40,10 +40,10 @@ const { title = 'ENT & Allergy | Ear, Nose & Throat Specialist | Hawke\'s Bay' }
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const heroCta = document.querySelector('#hero-cta');
+        const heroSection = document.querySelector('#hero');
         const requestSection = document.querySelector('#request');
         const stickyCta = document.querySelector('#sticky-cta');
-        if (!heroCta || !stickyCta) return;
+        if (!heroSection || !stickyCta) return;
 
         const visibleTargets = new Set();
 
@@ -62,10 +62,10 @@ const { title = 'ENT & Allergy | Ear, Nose & Throat Specialist | Hawke\'s Bay' }
               stickyCta.classList.remove('hidden');
             }
           },
-          { root: null, threshold: 0.1 }
+          { root: null, threshold: 0 }
         );
 
-        observer.observe(heroCta);
+        observer.observe(heroSection);
         if (requestSection) observer.observe(requestSection);
       });
     </script>
