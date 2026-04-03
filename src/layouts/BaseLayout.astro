@@ -41,26 +41,32 @@ const { title = 'ENT & Allergy | Ear, Nose & Throat Specialist | Hawke\'s Bay' }
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const heroCta = document.querySelector('#hero-cta');
+        const requestSection = document.querySelector('#request');
         const stickyCta = document.querySelector('#sticky-cta');
         if (!heroCta || !stickyCta) return;
+
+        const visibleTargets = new Set();
 
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                stickyCta.classList.add('hidden');
+                visibleTargets.add(entry.target);
               } else {
-                stickyCta.classList.remove('hidden');
+                visibleTargets.delete(entry.target);
               }
             });
+            if (visibleTargets.size > 0) {
+              stickyCta.classList.add('hidden');
+            } else {
+              stickyCta.classList.remove('hidden');
+            }
           },
-          {
-            root: null,
-            threshold: 0.1,
-          }
+          { root: null, threshold: 0.1 }
         );
 
         observer.observe(heroCta);
+        if (requestSection) observer.observe(requestSection);
       });
     </script>
   </body>
