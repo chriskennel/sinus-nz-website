@@ -26,7 +26,8 @@
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
       if (scrolled <= hero.offsetHeight) {
-        bg.style.transform = `scale(1.2) translateY(${scrolled * 0.25}px)`;
+        const factor = window.innerWidth >= 768 ? 0.08 : 0.25;
+        bg.style.transform = `scale(1.2) translateY(${scrolled * factor}px)`;
       }
     }, { passive: true });
   }
