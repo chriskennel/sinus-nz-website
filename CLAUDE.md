@@ -53,6 +53,31 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 - Condition images: `public/images/conditions/` (jpg versions used, png versions exist but unused)
 - Logo/favicon: `public/images/logo/favicon.png`
 
+## Project Origin (from Copilot session)
+- Site was initially scaffolded by GitHub Copilot from a `BRIEF.md` file (still in project root)
+- Started as Astro + Tailwind with base layout, Nav, Hero, TrustBar
+- Copilot recommended headshot: `HEADSHOT DAY 1-1115 copy cropped small 2.jpg` (smiling, warm) — user agreed
+- Hero image: `IMG_5159 2b.jpg` (B&W Temata Hills photo) — moved to `public/images/hero/hero-temata.jpg`
+- Original condition images were small icons beside section titles; later replaced with David sculpture JPGs
+
+## Content Strategy
+- **Alphabetical ordering** of condition chips and "What we treat" navigation cards — strategic choice to avoid implying any specialty is prioritised over another (avoids friction with colleagues)
+- Dr Kennel is the only FRACS (ORL) in Hawke's Bay — mentioned subtly in About/Trust sections, not as a headline, to avoid collegial resentment
+- Colleague at ENT Head & Neck Hawke's Bay specialises in thyroid — thyroid deliberately omitted from site
+- Allergy is in the business name so must be included — but **inhalational allergies only**, not food allergies
+- Coblation tonsillectomy is a key differentiator — Dr Kennel was first in region to offer it; audit shows 0% readmission for bleeding/pain/dehydration
+- Parotid surgery via facelift (minimal incision) approach with fat grafting for contour — unique in Hawke's Bay
+- Transoral Zenker's diverticulum — unique equipment in region
+- Osia surgically implanted hearing device — only surgeon in region doing this
+- Advanced otology is hardest ENT subspecialty; fellowship trained at Delaware with Michael Teixido
+- Does NOT do: cochlear implants, stereotactic radiosurgery (did in US, not currently in NZ), thyroid surgery, cosmetic rhinoplasty/facelifts, food allergy
+
+## FAQ Structure (4 groups)
+1. **Before your visit** — referral, preparation, wait times, rescheduling, parking
+2. **Costs & insurance** — fee schedule, ACC, Southern Cross/NIB, payment terms
+3. **Surgery** — age/medical limits, wait times, complication rates
+4. **About the practice** — conditions not treated, group affiliation, colleagues
+
 ## Design Decisions (from prior session)
 - Hero image is intentionally **black & white** — distinctive against colour-heavy competitor sites; green CTA button pops more against monochromatic background
 - Condition category cards use David sculpture JPG images with black backgrounds (not transparent PNGs) — black provides more visual weight, prevents washed-out look
