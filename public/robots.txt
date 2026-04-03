@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sinus-nz.netlify.app/sitemap-index.xml
+Sitemap: https://sinus.nz/sitemap-index.xml
