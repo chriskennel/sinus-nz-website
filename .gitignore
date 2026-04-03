@@ -3,18 +3,18 @@ dist/
 .DS_Store
 
 # Working files in project root (not part of the website)
-*.psd
-*.png
-*.jpg
-*.jpeg
-*.svg
-BRIEF.md
-ENTA*
-HEADSHOT*
-IMG_*
-Portrait*
-image-from-rawpixel*
-ear*
-nose*
-neck*
-throat*
+/*.psd
+/*.png
+/*.jpg
+/*.jpeg
+/*.svg
+/BRIEF.md
+/ENTA*
+/HEADSHOT*
+/IMG_*
+/Portrait*
+/image-from-rawpixel*
+/ear*
+/nose*
+/neck*
+/throat*
