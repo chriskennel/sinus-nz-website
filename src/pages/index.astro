@@ -285,40 +285,50 @@ import TrustBar from '../components/TrustBar.astro';
     </section>
 
     <section id="how" class="bg-white border-b border-border py-10">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
-        <h2 class="mb-6 text-2xl font-medium text-near-black">What to expect</h2>
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
-            <a href="#request" class="group">
-              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white transition group-hover:bg-[#244f3e]">
-                <span class="font-bold">1</span>
-              </div>
-              <h3 class="mb-1 font-medium text-near-black transition group-hover:text-forest-green">Request a consultation</h3>
+      <div class="mx-auto max-w-3xl px-4 md:px-6">
+        <h2 class="mb-2 text-2xl font-medium text-near-black">Your surgical journey</h2>
+        <p class="mb-8 text-sm text-muted-text">From first contact to full recovery — here's what to expect at every stage.</p>
+        <ol class="relative border-l-2 border-forest-green/30 space-y-0">
+
+          <li class="relative pb-8 pl-8">
+            <span class="absolute -left-[1.15rem] flex h-9 w-9 items-center justify-center rounded-full bg-forest-green text-white text-sm font-bold ring-4 ring-white">1</span>
+            <a href="#request" class="group inline-block">
+              <h3 class="font-medium text-near-black group-hover:text-forest-green transition-colors">Get in touch →</h3>
             </a>
-            <p class="text-sm text-muted-text">Contact us by <a href="tel:+6466514070" class="text-forest-green hover:underline">phone</a> or <a href="#request" class="text-forest-green hover:underline">online form</a>. Self-referrals and GP referrals both welcome.</p>
-          </div>
-          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
-            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white">
-              <span class="font-bold">2</span>
-            </div>
-            <h3 class="mb-1 font-medium text-near-black">Initial appointment</h3>
-            <p class="text-sm text-muted-text">A thorough examination and diagnosis. Endoscopy and minor procedures are often performed. Imaging or blood tests may also be ordered.</p>
-          </div>
-          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
-            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white">
-              <span class="font-bold">3</span>
-            </div>
-            <h3 class="mb-1 font-medium text-near-black">Results review</h3>
-            <p class="text-sm text-muted-text">If investigations were needed, a follow-up to review results and confirm your treatment plan.</p>
-          </div>
-          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
-            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white">
-              <span class="font-bold">4</span>
-            </div>
-            <h3 class="mb-1 font-medium text-near-black">Treatment</h3>
-            <p class="text-sm text-muted-text">Prompt and definitive. Dr. Kennel aims to avoid unnecessary follow-ups — most patients move to treatment without delay.</p>
-          </div>
-        </div>
+            <p class="mt-1 text-sm text-muted-text">Contact us by <a href="tel:+6466514070" class="text-forest-green hover:underline">phone</a> or <a href="#request" class="text-forest-green hover:underline">online form</a>. No GP referral required — self-referrals are welcome.</p>
+          </li>
+
+          <li class="relative pb-8 pl-8">
+            <span class="absolute -left-[1.15rem] flex h-9 w-9 items-center justify-center rounded-full bg-forest-green text-white text-sm font-bold ring-4 ring-white">2</span>
+            <h3 class="font-medium text-near-black">Initial consultation</h3>
+            <p class="mt-1 text-sm text-muted-text">A thorough examination and diagnosis. Endoscopy and minor in-office procedures are often performed at the first visit. Imaging or blood tests may be ordered.</p>
+          </li>
+
+          <li class="relative pb-8 pl-8">
+            <span class="absolute -left-[1.15rem] flex h-9 w-9 items-center justify-center rounded-full bg-forest-green text-white text-sm font-bold ring-4 ring-white">3</span>
+            <h3 class="font-medium text-near-black">Treatment planning</h3>
+            <p class="mt-1 text-sm text-muted-text">Results reviewed and options explained in plain language. If surgery is the right path, Dr. Kennel will discuss the procedure, risks, outcomes, and costs — with no pressure.</p>
+          </li>
+
+          <li class="relative pb-8 pl-8">
+            <span class="absolute -left-[1.15rem] flex h-9 w-9 items-center justify-center rounded-full bg-forest-green text-white text-sm font-bold ring-4 ring-white">4</span>
+            <h3 class="font-medium text-near-black">Pre-operative preparation</h3>
+            <p class="mt-1 text-sm text-muted-text">Anaesthetist assessment, any required pre-op blood tests, and written instructions for the day of surgery. Most procedures are day surgery at Kaweka Hospital, Hastings.</p>
+          </li>
+
+          <li class="relative pb-8 pl-8">
+            <span class="absolute -left-[1.15rem] flex h-9 w-9 items-center justify-center rounded-full bg-forest-green text-white text-sm font-bold ring-4 ring-white">5</span>
+            <h3 class="font-medium text-near-black">Surgery</h3>
+            <p class="mt-1 text-sm text-muted-text">Performed under general anaesthetic by Dr. Kennel. Minimally invasive techniques are used wherever possible for faster recovery and less post-operative discomfort.</p>
+          </li>
+
+          <li class="relative pl-8">
+            <span class="absolute -left-[1.15rem] flex h-9 w-9 items-center justify-center rounded-full bg-forest-green text-white text-sm font-bold ring-4 ring-white">6</span>
+            <h3 class="font-medium text-near-black">Recovery & follow-up</h3>
+            <p class="mt-1 text-sm text-muted-text">A written recovery guide is provided before discharge. Dr. Kennel gives every surgical patient his personal mobile number — call or text any time if you have concerns. A post-operative appointment is scheduled to confirm healing.</p>
+          </li>
+
+        </ol>
       </div>
     </section>
 
@@ -350,15 +360,15 @@ import TrustBar from '../components/TrustBar.astro';
 
         <!-- Surgical outcomes highlight -->
         <div class="mb-6 rounded-xl border border-forest-green bg-[#f0f7f4] px-5 py-4">
-          <p class="mb-3 text-sm font-semibold text-near-black">Audited surgical outcomes — published annually</p>
+          <p class="mb-3 text-sm font-semibold text-near-black">Audited surgical outcomes — published annually (November 2025)</p>
           <div class="grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-4">
             <div>
               <p class="text-2xl font-semibold text-forest-green">0%</p>
               <p class="text-xs text-muted-text leading-snug">Coblation tonsillectomy readmission (bleeding, pain, or dehydration)</p>
             </div>
             <div>
-              <p class="text-2xl font-semibold text-forest-green">100%</p>
-              <p class="text-xs text-muted-text leading-snug">Melanoma clear surgical margins</p>
+              <p class="text-2xl font-semibold text-forest-green">1.6%</p>
+              <p class="text-xs text-muted-text leading-snug">Operating theatre infection rate</p>
             </div>
             <div>
               <p class="text-2xl font-semibold text-forest-green">92.9%</p>
@@ -603,7 +613,7 @@ import TrustBar from '../components/TrustBar.astro';
     <section id="request" class="bg-white py-10">
       <div class="mx-auto max-w-6xl px-4 md:px-6">
         <h2 class="mb-3 text-2xl font-medium text-near-black">Request a consultation</h2>
-        <p class="mb-6 text-muted-text">Self-referrals and GP referrals both welcome.</p>
+        <p class="mb-6 text-muted-text">For patients with an ongoing ENT condition or seeking specialist surgical assessment. Self-referrals and GP referrals both welcome.</p>
         <form name="consultation-request" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <input type="hidden" name="form-name" value="consultation-request" />
           <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
@@ -620,8 +630,23 @@ import TrustBar from '../components/TrustBar.astro';
             <input type="tel" name="phone" placeholder="06 651 4070" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
           <label class="sm:col-span-2">
+            <span class="mb-1 block text-sm font-medium text-near-black">Condition or procedure of interest</span>
+            <select name="area-of-interest" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none">
+              <option value="" disabled selected>Select a condition…</option>
+              <option value="Hearing loss or ear drum problem">Hearing loss or ear drum problem</option>
+              <option value="Chronic ear disease or cholesteatoma">Chronic ear disease or cholesteatoma</option>
+              <option value="Chronic sinusitis or nasal polyps">Chronic sinusitis or nasal polyps</option>
+              <option value="Deviated septum or nasal obstruction">Deviated septum or nasal obstruction</option>
+              <option value="Tonsil or adenoid problems">Tonsil or adenoid problems</option>
+              <option value="Swallowing difficulty">Swallowing difficulty</option>
+              <option value="Neck lump or mass">Neck lump or mass</option>
+              <option value="Skin cancer — face or neck">Skin cancer — face or neck</option>
+              <option value="Not sure / other">Not sure / other</option>
+            </select>
+          </label>
+          <label class="sm:col-span-2">
             <span class="mb-1 block text-sm font-medium text-near-black">Reason for consultation</span>
-            <textarea name="reason" rows="4" placeholder="Tell us briefly what you're experiencing" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none"></textarea>
+            <textarea name="reason" rows="3" placeholder="Tell us briefly what you're experiencing" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none"></textarea>
           </label>
           <button type="submit" class="sm:col-span-2 inline-flex items-center justify-center rounded-full bg-forest-green px-6 py-3 text-sm font-medium text-white transition hover:bg-[#244f3e]">
             Submit request
