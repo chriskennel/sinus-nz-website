@@ -3,6 +3,6 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://sinus.nz',
+  site: 'https://entallergy.nz',
   integrations: [tailwind(), sitemap()],
 });

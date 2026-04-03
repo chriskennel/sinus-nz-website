@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sinus.nz/sitemap-index.xml
+Sitemap: https://entallergy.nz/sitemap-index.xml
