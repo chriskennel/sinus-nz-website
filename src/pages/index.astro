@@ -350,7 +350,10 @@ import TrustBar from '../components/TrustBar.astro';
           </p>
         </div>
         <div class="md:w-1/2">
-          <img src="/images/dr-kennel/dr-kennel.jpg" alt="Dr. Chris Kennel" class="w-full rounded-lg object-cover" />
+          <div id="headshot-wrap" class="group relative cursor-pointer overflow-hidden rounded-lg">
+            <img src="/images/dr-kennel/dr-kennel.jpg" alt="Dr. Chris Kennel" class="w-full rounded-lg object-cover transition-opacity duration-500 group-hover:opacity-0" />
+            <img id="easter-egg" src="/images/dr-kennel/dr-kennel-easter-egg.jpg" alt="Dr. Kennel — 2nd best surgeon of the day" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          </div>
         </div>
       </div>
     </section>
@@ -657,6 +660,24 @@ import TrustBar from '../components/TrustBar.astro';
     </section>
 
   </main>
+
+  <script>
+    // Easter egg: tap headshot on mobile for a 2-second reveal
+    const wrap = document.getElementById('headshot-wrap');
+    const egg = document.getElementById('easter-egg');
+    if (wrap && egg) {
+      let timer = null;
+      wrap.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        if (timer) return; // already showing
+        egg.classList.add('!opacity-100');
+        timer = setTimeout(() => {
+          egg.classList.remove('!opacity-100');
+          timer = null;
+        }, 2000);
+      }, { passive: false });
+    }
+  </script>
 
   <footer class="bg-near-black text-white">
     <div class="mx-auto max-w-6xl px-4 py-8 md:px-6">
