@@ -72,11 +72,57 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 - Advanced otology is hardest ENT subspecialty; fellowship trained at Delaware with Michael Teixido
 - Does NOT do: cochlear implants, stereotactic radiosurgery (did in US, not currently in NZ), thyroid surgery, cosmetic rhinoplasty/facelifts, food allergy
 
+## TrustBar (src/components/TrustBar.astro)
+- 3 cards, all with green border (`border-2 border-forest-green`) and green-tinted background (`bg-[#f0f7f4]`)
+- Order: (1) No GP referral needed — with phone link, (2) 24/7 direct surgeon access, (3) FRACS qualification
+- All headings use `font-semibold`
+
+## Surgical Outcomes Panel (in index.astro, "Why Choose" section)
+- Compact callout box above the Why Choose grid
+- 4 stats: 0% coblation tonsillectomy readmission, 1.6% operating theatre infection rate, 92.9% H&N cancer clear margins, 94.7% non-melanoma skin cancer clear margins
+- Label: "Audited surgical outcomes — published annually (November 2025)"
+- Note below stats points to full figures in FAQ
+
+## Surgical Journey Timeline (src/pages/index.astro, section id="how")
+- Replaced the old 2-column 4-step grid with a 6-step vertical timeline
+- Uses `border-l-2 border-forest-green/30` connecting line with numbered green circles
+- Steps: (1) Get in touch — heading links to #request, (2) Initial consultation, (3) Treatment planning, (4) Pre-op preparation — mentions Kaweka Hospital, (5) Surgery, (6) Recovery & follow-up — reinforces 24/7 mobile access
+- Max width `max-w-3xl` (narrower than other sections for readability)
+
+## Consultation Form (section id="request")
+- Intro text: "For patients with an ongoing ENT condition or seeking specialist surgical assessment."
+- Fields: Name, Email, Phone, Condition or procedure of interest (dropdown), Reason for consultation (textarea, 3 rows)
+- Dropdown options are surgery-oriented — excludes tinnitus, dizziness, allergy as standalone choices:
+  - Hearing loss or ear drum problem
+  - Chronic ear disease or cholesteatoma
+  - Chronic sinusitis or nasal polyps
+  - Deviated septum or nasal obstruction
+  - Tonsil or adenoid problems
+  - Swallowing difficulty
+  - Neck lump or mass
+  - Skin cancer — face or neck
+  - Not sure / other
+- Textarea placeholder: "Briefly describe your condition or any relevant test results."
+
 ## FAQ Structure (4 groups)
 1. **Before your visit** — referral, preparation, wait times, rescheduling, parking
 2. **Costs & insurance** — fee schedule, ACC, Southern Cross/NIB, payment terms
 3. **Surgery** — age/medical limits, wait times, complication rates
 4. **About the practice** — conditions not treated, group affiliation, colleagues
+
+## Hero Text (current)
+- Heading: "We're here to help"
+- Subheader: "Advanced ENT Surgery in Hawke's Bay. Specialised care for Ear, Sinus, and Head & Neck conditions with 24/7 direct surgeon access."
+
+## Meta Description (current)
+- "Dr. Chris Kennel FRACS — sinus surgery, septoplasty, advanced ear surgery & head & neck cancer specialist in Hastings, Hawke's Bay. Coblation tonsillectomy, stapes, parotid surgery. Self-referrals welcome."
+- Front-loads procedure names for surgical intent SEO; ~205 chars (truncates visually at ~160 but all keywords indexed)
+
+## SEO Notes
+- Gemini initially misread entallergy.nz as a holding page (SSL was pending); corrected after SSL resolved
+- Strategy: niche/high-intent surgical keywords rather than broad ENT volume terms
+- Google Search Console and Bing Webmaster Tools submitted
+- Pending: Google Business Profile setup linked to entallergy.nz; add Gisborne/Tairāwhiti as service area
 
 ## Design Decisions (from prior session)
 - Hero image is intentionally **black & white** — distinctive against colour-heavy competitor sites; green CTA button pops more against monochromatic background
