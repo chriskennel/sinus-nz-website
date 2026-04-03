@@ -578,7 +578,7 @@ import TrustBar from '../components/TrustBar.astro';
       <div class="mx-auto max-w-6xl px-4 md:px-6">
         <h2 class="mb-3 text-2xl font-medium text-near-black">Request a consultation</h2>
         <p class="mb-6 text-muted-text">Self-referrals and GP referrals both welcome.</p>
-        <form name="consultation-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <form name="consultation-request" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <input type="hidden" name="form-name" value="consultation-request" />
           <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
           <label class="sm:col-span-2">
