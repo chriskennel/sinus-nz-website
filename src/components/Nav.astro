@@ -1,0 +1,56 @@
+---
+const links = [
+  { href: '#hero', label: 'Home' },
+  { href: '#trust', label: 'Trust' },
+  { href: '#conditions', label: 'Conditions' },
+  { href: '#about', label: 'About' },
+  { href: '#faq', label: 'FAQ' },
+  { href: '#request', label: 'Consult' },
+];
+---
+<nav class="fixed inset-x-0 top-0 z-40 bg-near-black/95 backdrop-blur-md">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-1 md:px-6">
+    <a href="#hero" class="flex items-center gap-2">
+      <img src="/images/logo/ENTA%20logo%20solid%20tragus_Black%20on%20transparent%20large%20text.svg" alt="ENT & Allergy" class="h-14 w-auto invert" />
+      <span class="sr-only">ENT & Allergy</span>
+    </a>
+
+    <input id="nav-toggle" type="checkbox" class="peer sr-only" />
+    <label
+      for="nav-toggle"
+      class="md:hidden cursor-pointer p-2 text-white transition hover:text-green-100"
+      aria-label="Toggle menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </label>
+
+    <div class="hidden md:flex md:items-center md:gap-6">
+      {links.map((item) => (
+        <a href={item.href} class="text-sm font-medium text-white transition hover:text-green-100">
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="peer-checked:block hidden border-t border-gray-800 bg-near-black md:hidden">
+    <div class="flex flex-col gap-1 px-4 py-3">
+      {links.map((item) => (
+        <a href={item.href} class="nav-link rounded-md px-3 py-2 text-base font-medium text-white transition hover:bg-gray-900/70 hover:text-green-100">
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      const toggle = document.getElementById('nav-toggle') as HTMLInputElement | null;
+      if (toggle) toggle.checked = false;
+    });
+  });
+</script>

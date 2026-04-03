@@ -1,0 +1,67 @@
+---
+const { title = 'ENT & Allergy | Ear, Nose & Throat Specialist | Hawke\'s Bay' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dr. Chris Kennel — FRACS ENT surgeon in Hastings, serving Hawke's Bay and Tairāwhiti/Gisborne. Ear, nose, throat and head & neck surgery. Self-referrals and GP referrals welcome." />
+    <title>{title}</title>
+    <link rel="icon" href="/images/logo/ENTA%20logo%20no%20text_Small%20favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-off-white text-near-black antialiased">
+    <style is:global>
+      body {
+        font-family: 'DM Sans', system-ui, sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Gotu', system-ui, sans-serif;
+        font-weight: 400;
+      }
+      section[id] {
+        scroll-margin-top: 64px;
+      }
+    </style>
+    <slot />
+
+    <!-- Sticky CTA for mobile and desktop -->
+    <a
+      id="sticky-cta"
+      href="#request"
+      class="fixed inset-x-4 bottom-4 z-50 hidden rounded-full bg-forest-green py-3 px-5 text-center text-sm font-medium text-white shadow-lg transition hover:bg-[#244f3e] md:bottom-6 md:left-auto md:right-6 md:w-auto"
+      aria-label="Request a consultation"
+    >
+      Request a consultation
+    </a>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const heroCta = document.querySelector('#hero-cta');
+        const stickyCta = document.querySelector('#sticky-cta');
+        if (!heroCta || !stickyCta) return;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                stickyCta.classList.add('hidden');
+              } else {
+                stickyCta.classList.remove('hidden');
+              }
+            });
+          },
+          {
+            root: null,
+            threshold: 0.1,
+          }
+        );
+
+        observer.observe(heroCta);
+      });
+    </script>
+  </body>
+</html>

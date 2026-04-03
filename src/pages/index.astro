@@ -1,0 +1,622 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import TrustBar from '../components/TrustBar.astro';
+---
+<BaseLayout>
+  <Nav />
+
+  <main class="pt-16">
+    <Hero />
+    <TrustBar />
+
+    <section id="conditions" class="bg-off-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-5 text-2xl font-medium text-near-black">What we treat</h2>
+        <p class="mb-6 text-muted-text">Select one to jump to the section below.</p>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="#ears" class="overflow-hidden rounded-xl border border-border bg-white transition hover:border-forest-green hover:shadow-lg">
+            <img src="/images/conditions/ear%20smooth.jpg" alt="" class="h-48 w-full object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-medium text-near-black">Ears</h3>
+              <p class="text-sm text-muted-text">Complex ear surgery, hearing loss, Osia implants.</p>
+            </div>
+          </a>
+          <a href="#head-neck" class="overflow-hidden rounded-xl border border-border bg-white transition hover:border-forest-green hover:shadow-lg">
+            <img src="/images/conditions/neck%20smooth.jpg" alt="" class="h-48 w-full object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-medium text-near-black">Head & neck & skin</h3>
+              <p class="text-sm text-muted-text">Skin lesions, neck masses, parotid surgery, cancer care.</p>
+            </div>
+          </a>
+          <a href="#nose" class="overflow-hidden rounded-xl border border-border bg-white transition hover:border-forest-green hover:shadow-lg">
+            <img src="/images/conditions/nose%20smooth.jpg" alt="" class="h-48 w-full object-cover object-[center_75%]" />
+            <div class="p-4">
+              <h3 class="text-lg font-medium text-near-black">Nose & sinuses</h3>
+              <p class="text-sm text-muted-text">Sinusitis, polyps, allergies, coblation tonsillectomy.</p>
+            </div>
+          </a>
+          <a href="#throat" class="overflow-hidden rounded-xl border border-border bg-white transition hover:border-forest-green hover:shadow-lg">
+            <img src="/images/conditions/throat%20smooth.jpg" alt="" class="h-48 w-full object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-medium text-near-black">Throat</h3>
+              <p class="text-sm text-muted-text">Tonsils, adenoids, swallowing disorders.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="ears" class="bg-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-6 text-2xl font-medium text-near-black">Ears</h2>
+        <p class="mb-8 text-muted-text">
+          Specialized care for ear conditions, including complex microsurgery and advanced hearing solutions.
+        </p>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="cholesteatoma" type="checkbox" class="peer sr-only" />
+            <label for="cholesteatoma" class="flex cursor-pointer items-center justify-between">
+              <span class="font-normal text-near-black">Cholesteatoma</span>
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Abnormal skin growth in the middle ear causing erosion of bone, infections and hearing loss. Requires surgical removal to prevent complications and reconstruction to restore hearing.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="osia-implant" type="checkbox" class="peer sr-only" />
+            <label for="osia-implant" class="flex cursor-pointer items-center justify-between">
+              <span class="font-normal text-near-black">Osia implanted hearing device</span>
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Advanced bone conduction implant for severe hearing loss. Surgically placed behind the ear for improved hearing. Dr. Kennel was one of the first surgeons in New Zealand to have implanted this device.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="surfers-ear" type="checkbox" class="peer sr-only" />
+            <label for="surfers-ear" class="flex cursor-pointer items-center justify-between">
+              <span class="font-normal text-near-black">Surfer's ear — minimally invasive canalplasty</span>
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Bony growths in the ear canal from cold water exposure cause recurrent infections and hearing loss. Dr. Kennel performs minimally invasive canalplasty to remove the growths with less pain and faster recovery than traditional approaches.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="otosclerosis" type="checkbox" class="peer sr-only" />
+            <label for="otosclerosis" class="cursor-pointer font-normal text-near-black">
+              Otosclerosis & congenital stapes fixation
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Abnormal bone growth in the middle ear causing conductive hearing loss. Treated with stapes surgery to restore hearing.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="eardrum-perforation" type="checkbox" class="peer sr-only" />
+            <label for="eardrum-perforation" class="cursor-pointer font-normal text-near-black">
+              Perforated eardrum repair
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              A hole in the eardrum from infection, trauma, or pressure changes can cause hearing loss and recurrent infections. Myringoplasty and tympanoplasty close the perforation to restore hearing and protect the middle ear.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="hearing-loss" type="checkbox" class="peer sr-only" />
+            <label for="hearing-loss" class="cursor-pointer font-normal text-near-black">
+              Hearing loss / grommets
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Middle ear fluid causing conductive hearing loss. Often treated with grommet tubes to drain fluid and restore hearing. This can be done in clinic under local anaesthetic for adults. Children usually require general anaesthetic.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="nose" class="bg-off-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="mb-6 flex items-center gap-3">
+          <h2 class="text-2xl font-medium text-near-black">Nose & sinuses</h2>
+        </div>
+        <p class="mb-8 text-muted-text">
+          Comprehensive care for nasal and sinus conditions, including advanced endoscopic surgery.
+        </p>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="chronic-sinusitis" type="checkbox" class="peer sr-only" />
+            <label for="chronic-sinusitis" class="flex cursor-pointer items-center justify-between">
+              <span class="font-normal text-near-black">Chronic sinusitis</span>
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Chronic inflammation of the sinuses causing congestion, facial pain, and recurrent infections. Treated with medical therapy and endoscopic sinus surgery when needed.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="nasal-polyps" type="checkbox" class="peer sr-only" />
+            <label for="nasal-polyps" class="cursor-pointer font-normal text-near-black">
+              Nasal polyps
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Non-cancerous growths in the nasal passages causing obstruction and loss of smell. Often associated with chronic sinusitis and allergies.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="adenoidectomy" type="checkbox" class="peer sr-only" />
+            <label for="adenoidectomy" class="cursor-pointer font-normal text-near-black">
+              Adenoidectomy
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Surgical removal of enlarged adenoids that can cause nasal obstruction, snoring, and recurrent ear infections in children.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="blocked-nose" type="checkbox" class="peer sr-only" />
+            <label for="blocked-nose" class="cursor-pointer font-normal text-near-black">
+              Blocked nose / deviated nasal septum
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Nasal obstruction due to a deviated septum or enlarged turbinates. Can be corrected with septoplasty or turbinate reduction surgery. Dr. Kennel uses coblation technology for turbinate reduction, which causes less bleeding and faster recovery than traditional techniques.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="allergy-rhinitis" type="checkbox" class="peer sr-only" />
+            <label for="allergy-rhinitis" class="cursor-pointer font-normal text-near-black">
+              Allergy & rhinitis (inhalational)
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Allergic rhinitis caused by airborne allergens like pollen, dust, and pet dander. Managed with medications and immunotherapy when appropriate.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="head-neck" class="bg-white border-b border-border py-10">
+
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-6 text-2xl font-medium text-near-black">Head & neck & skin</h2>
+        <p class="mb-8 text-muted-text">
+          Comprehensive care for head, neck, and skin conditions, including cancer treatment and reconstructive surgery.
+        </p>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="parotid-surgery" type="checkbox" class="peer sr-only" />
+            <label for="parotid-surgery" class="flex cursor-pointer items-center justify-between">
+              <span class="font-normal text-near-black">Parotid tumour surgery</span>
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Dr. Kennel removes parotid tumours through a minimal facelift incision, concealing the scar within natural skin folds. Fat grafting is used to restore the facial contour, reducing the visible indentation that often follows traditional parotidectomy. Facial nerve preservation is a priority — to date, no patient has sustained a permanent facial nerve injury from parotid surgery at ENT &amp; Allergy.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="zenkers-diverticulum" type="checkbox" class="peer sr-only" />
+            <label for="zenkers-diverticulum" class="flex cursor-pointer items-center justify-between">
+              <span class="font-normal text-near-black">Zenker's diverticulum & cricopharyngeal dysfunction</span>
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Zenker's diverticulum is treated with minimally invasive transoral surgery using specialised equipment — less pain and faster recovery than open approaches. Cricopharyngeal dysfunction causing swallowing difficulty is treated with open cricopharyngeal myotomy when conservative measures have failed.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="head-neck-cancer" type="checkbox" class="peer sr-only" />
+            <label for="head-neck-cancer" class="cursor-pointer font-normal text-near-black">
+              Head & neck cancer
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Surgical treatment for head and neck cancers including oral, oropharyngeal, and salivary gland malignancies, with neck dissection where required. Neck dissection for melanoma and metastatic cutaneous SCC also performed. Cases needing laryngectomy or major reconstructive surgery are referred to specialist centres in Auckland or Wellington.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="facial-skin-lesions" type="checkbox" class="peer sr-only" />
+            <label for="facial-skin-lesions" class="cursor-pointer font-normal text-near-black">
+              Facial skin lesions & skin cancer
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Surgical removal of benign and malignant skin lesions of the face, scalp, and neck — from cysts and benign growths to BCC, SCC, and melanoma. Includes reconstruction to restore appearance and function. Where cancer has spread to regional lymph nodes, neck dissection can be performed locally.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-off-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="neck-masses" type="checkbox" class="peer sr-only" />
+            <label for="neck-masses" class="cursor-pointer font-normal text-near-black">
+              Neck masses
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Lumps or swellings in the neck can have many causes — benign cysts, lymph node enlargement, or tumours requiring urgent assessment. Ultrasound-guided fine needle aspiration (FNA) is available in clinic to speed diagnosis, avoiding a separate radiology referral.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="throat" class="bg-off-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-6 text-2xl font-medium text-near-black">Throat</h2>
+        <p class="mb-8 text-muted-text">
+          Surgical care for throat conditions, including tonsils, adenoids, and swallowing disorders.
+        </p>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="coblation-tonsillectomy" type="checkbox" class="peer sr-only" />
+            <label for="coblation-tonsillectomy" class="flex cursor-pointer items-center justify-between">
+              <span class="font-normal text-near-black">Coblation tonsillectomy</span>
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Dr. Kennel was the first surgeon in the region to offer coblation intracapsular tonsillectomy. Less tissue damage means less pain and faster recovery than traditional methods — and his audit shows 0% readmission for bleeding, pain, or dehydration in coblation cases.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="tonsils-adenoids" type="checkbox" class="peer sr-only" />
+            <label for="tonsils-adenoids" class="cursor-pointer font-normal text-near-black">
+              Tonsils & adenoids
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Surgical treatment for recurrent infections, obstruction, or sleep apnoea. Includes traditional and coblation techniques.
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+            <input id="botox-cricopharyngeal" type="checkbox" class="peer sr-only" />
+            <label for="botox-cricopharyngeal" class="cursor-pointer font-normal text-near-black">
+              Botox for retrograde cricopharyngeal dysfunction
+            </label>
+            <div class="mt-3 hidden text-sm text-muted-text peer-checked:block">
+              Retrograde cricopharyngeal dysfunction (R-CPD) prevents normal belching and can cause bloating, gurgling, and social distress. Botox injection into the cricopharyngeal muscle is a highly effective, minimally invasive treatment.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="bg-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-6 text-2xl font-medium text-near-black">What to expect</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
+            <a href="#request" class="group">
+              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white transition group-hover:bg-[#244f3e]">
+                <span class="font-bold">1</span>
+              </div>
+              <h3 class="mb-1 font-medium text-near-black transition group-hover:text-forest-green">Request a consultation</h3>
+            </a>
+            <p class="text-sm text-muted-text">Contact us by <a href="tel:+6466514070" class="text-forest-green hover:underline">phone</a> or <a href="#request" class="text-forest-green hover:underline">online form</a>. Self-referrals and GP referrals both welcome.</p>
+          </div>
+          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white">
+              <span class="font-bold">2</span>
+            </div>
+            <h3 class="mb-1 font-medium text-near-black">Initial appointment</h3>
+            <p class="text-sm text-muted-text">A thorough examination and diagnosis. Endoscopy and minor procedures are often performed. Imaging or blood tests may also be ordered.</p>
+          </div>
+          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white">
+              <span class="font-bold">3</span>
+            </div>
+            <h3 class="mb-1 font-medium text-near-black">Results review</h3>
+            <p class="text-sm text-muted-text">If investigations were needed, a follow-up to review results and confirm your treatment plan.</p>
+          </div>
+          <div class="rounded-xl border border-border bg-off-white p-5 transition hover:shadow-sm">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-forest-green text-white">
+              <span class="font-bold">4</span>
+            </div>
+            <h3 class="mb-1 font-medium text-near-black">Treatment</h3>
+            <p class="text-sm text-muted-text">Prompt and definitive. Dr. Kennel aims to avoid unnecessary follow-ups — most patients move to treatment without delay.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-off-white border-b border-border py-10">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 md:flex-row md:items-center md:justify-between md:px-6">
+        <div class="md:w-1/2">
+          <h2 class="mb-3 text-2xl font-medium text-near-black">About Dr. Chris Kennel</h2>
+          <p class="mb-4 text-muted-text">
+            Dr. Kennel is a fellowship-trained otolaryngologist who moved from the US to Hawke's Bay in 2022 with his family — drawn by the lifestyle, the community, and the opportunity to provide comprehensive ENT care in a region that needs it.
+          </p>
+          <p class="mb-4 text-muted-text">
+            Originally from Colorado, he completed his medical training at the University of Colorado School of Medicine and otolaryngology residency at the University of Missouri School of Medicine, followed by an advanced fellowship in complex ear surgery, neurotology, and stereotactic radiosurgery in Delaware, and a fellowship with the American Academy of Otolaryngic Allergy.
+          </p>
+          <p class="mb-4 text-muted-text">
+            He is a Diplomate of the American Board of Otolaryngology, a Fellow of the Royal Australasian College of Surgeons (FRACS), and holds vocational registration as a specialist with the Medical Council of New Zealand. He also teaches ENT registrars through the public hospital system.
+          </p>
+          <p class="text-muted-text">
+            Having navigated significant health challenges within his own family, he knows first-hand how important it is to be able to reach your surgeon directly — and gives his mobile number to all surgical patients for that reason.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="/images/dr-kennel/dr-kennel.jpg" alt="Dr. Chris Kennel" class="w-full rounded-lg object-cover" />
+        </div>
+      </div>
+    </section>
+    <section id="unique" class="bg-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-6 text-2xl font-medium text-near-black">Why choose ENT & Allergy?</h2>
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Full range of ENT and head & neck surgery — most patients treated locally, without needing to travel to Auckland or Wellington</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Fellow of the Royal Australasian College of Surgeons (FRACS) — the highest surgical qualification in Australasia</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">24/7 post-operative access to your surgeon</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">On-call, after-hours emergency care</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Treats both public and private patients</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Treats all ages, from young children to adults</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Minimally invasive surgical techniques for faster recovery</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Nerve blocks and Botox for ENT-specific pain</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Self-referrals and GP referrals both welcome</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Easy-to-understand written summary after every visit</p>
+          </div>
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Annual surgical outcome audit — one of the few ENT surgeons in New Zealand to publish complication rates</p>
+          </div>
+
+
+          <div class="rounded-lg border border-border bg-off-white px-4 py-3 transition hover:shadow-sm">
+            <p class="text-sm text-near-black">Contract surgeon for Health New Zealand — trusted by the public hospital system for specialist ENT care</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="bg-off-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-6 text-2xl font-medium text-near-black">Our location</h2>
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div>
+            <h3 class="mb-3 text-lg font-medium text-near-black">Kaweka Specialist Centre</h3>
+            <p class="mb-4 text-muted-text">Level 2, Kaweka Specialist Centre<br />209 Canning Road<br />Hastings, Hawke's Bay<br />New Zealand</p>
+            <p class="mb-4 text-muted-text">
+              <strong>Phone:</strong> <a href="tel:+6466514070" class="text-forest-green hover:underline">06 651 4070</a><br />
+              <strong>Hours:</strong> Monday–Friday 8:30 AM – 4:30 PM
+            </p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=209+Canning+Road+Hastings+Hawke's+Bay+New+Zealand" target="_blank" class="inline-flex items-center rounded-full bg-forest-green px-6 py-3 text-sm font-medium text-white transition hover:bg-[#244f3e]">
+              Get directions
+            </a>
+          </div>
+          <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.000255167667!2d176.81742476623816!3d-39.6271980983495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d69cb007987d483%3A0xa6b653ad79c44b54!2sKaweka%20Specialist%20Centre!5e0!3m2!1sen!2snz!4v1775168112593!5m2!1sen!2snz" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="bg-off-white border-b border-border py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-6 text-2xl font-medium text-near-black">FAQ</h2>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="mb-3 text-xl font-medium text-near-black">Before your visit</h3>
+            <div class="space-y-2">
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Do I need a referral?</summary>
+                <div class="mt-2 text-sm text-muted-text">
+                  <p>No formal referral is required — self-referrals and GP referrals are both welcome.</p>
+                  <p class="mt-2">A good referral includes information about your symptoms, any prior investigations, treatments tried, and relevant health history. This helps us assess urgency and ensure you're seen by the right specialist.</p>
+                  <p class="mt-2">If you're self-referring, please include a detailed description of your symptoms, any relevant prior treatments, and test results when you contact us — this helps us make the most of your consultation time.</p>
+                </div>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">What do I need before my first consultation?</summary>
+                <p class="mt-2 text-sm text-muted-text">Arrive 10 minutes early, bring ID, insurance details, and any existing reports, medication lists, or previous treatment notes. Appointments are typically 30 minutes (complex: 40+ minutes). Payment is required on the day; we can submit Southern Cross claims. Family members, whānau, or support persons are welcome to attend.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">How long does it take to get an appointment?</summary>
+                <p class="mt-2 text-sm text-muted-text">Urgent suspected cancer referrals are usually seen within 7 days. Most other patients are seen within 6–8 weeks, often sooner. We do our best to accommodate urgent non-cancer cases promptly — if your GP considers your situation urgent, ask them to note that in the referral and we will prioritise accordingly.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">What if I need to reschedule?</summary>
+                <p class="mt-2 text-sm text-muted-text">We understand that life sometimes gets in the way. Please call us as soon as possible — phone is the best way to reschedule so we can offer your slot to another patient. Call <a href="tel:+6466514070" class="text-forest-green hover:underline">06 651 4070</a> during business hours. Please give at least two business days notice. Each appointment reserves staff, clinic space, and resources, so cancellations with less than two business days notice, and no-shows, incur a $150 fee.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">When are you open?</summary>
+                <p class="mt-2 text-sm text-muted-text">Clinic hours are Monday–Friday 8:30 AM – 4:30 PM. Consultations are usually Tuesdays and Wednesdays; surgery Wednesdays, Thursdays and some Fridays at Kaweka Hospital.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Where do I park?</summary>
+                <p class="mt-2 text-sm text-muted-text">Kaweka Specialist Centre has an attached car park with dedicated patient spaces. The entry barrier opens automatically. We'll text you the exit code approximately 90 minutes before your appointment, and it's also available at reception during your visit.</p>
+              </details>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-3 text-xl font-medium text-near-black">Costs & insurance</h3>
+            <div class="space-y-2">
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">How much will it cost?</summary>
+                <div class="mt-2 text-sm text-muted-text">
+                  <p class="mb-2">Seeing a specialist is a significant cost without insurance. We try to offer good value by treating multiple problems in a single visit, performing minor procedures in clinic rather than the operating theatre (avoiding hospital and anaesthetist fees), and managing simple follow-up by phone, email, or text at no charge.</p>
+                  <ul class="list-disc space-y-1 pl-5">
+                    <li>Initial consultation: $325 (child) / $397 (adult)</li>
+                    <li>Follow-up: $219 (child) / $289 (adult)</li>
+                    <li>Complex consultation: $629 (initial) / $475 (follow-up)</li>
+                    <li>Simple procedures (endoscopy, ear cleaning, biopsy, nasal cautery, nerve blocks): $150–$297. Simple ear cleaning is free.</li>
+                    <li>Advanced procedures (grommets, ultrasound-guided biopsy, complex cautery): $435–$655</li>
+                    <li>Skin lesion removal: quoted separately depending on complexity</li>
+                    <li>Botox: $650 (100-unit vial)</li>
+                    <li>Prescription authorisation (no clinic visit, established patients only): $30</li>
+                  </ul>
+                  <p class="mt-2">These are indicative private fees and may change over time. ACC-covered appointments are free to patients. Southern Cross and NIB members have their own negotiated fees depending on their plan — we submit claims on your behalf. We provide a fee estimate before your appointment if requested. If your insurer requires prior authorisation, we can provide the necessary estimates.</p>
+                  <p class="mt-2">Your initial post-operative consultation within 6 weeks of surgery is fully covered. Note: if endoscopy is performed during a post-operative visit, this is charged separately.</p>
+                </div>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Do you accept ACC?</summary>
+                <p class="mt-2 text-sm text-muted-text">Yes, ACC is accepted and there is no additional ACC surcharge. ACC hearing loss evaluations are not performed through this clinic.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Can I be put on the public surgery list?</summary>
+                <p class="mt-2 text-sm text-muted-text">Yes, this is a common request for patients without private insurance. Surgery costs can be significant — hospital fees are often several times the surgeon's fee — making self-funding difficult. The public system offers the same surgical options, though cases are triaged by medical necessity. Urgent cases such as cancer are usually treated within weeks. Less urgent cases may wait months to over a year, and the public system may decline non-urgent elective cases if capacity is limited.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">What are the payment terms?</summary>
+                <p class="mt-2 text-sm text-muted-text">Payment is required on the day of service. We accept EFTPOS, credit card, or bank transfer. Direct deposit within 14 days to 38-9025-0478706-00 (ENT & Allergy Limited). $50 late fee after 30 days; disputes within 7 days.</p>
+              </details>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-3 text-xl font-medium text-near-black">Surgery</h3>
+            <div class="space-y-2">
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Are there age or medical limits for private surgery?</summary>
+                <div class="mt-2 text-sm text-muted-text">
+                  <p class="mb-2">Private surgeries are performed at Kaweka Hospital. The following guidelines apply:</p>
+                  <ul class="list-disc space-y-1 pl-5">
+                    <li><strong>Straightforward:</strong> ages 3–80 and relatively healthy</li>
+                    <li><strong>Requires assessment:</strong> ages 18 months–3 years; ages 3–80 with moderate medical conditions or higher anaesthetic risk; over 80 and relatively healthy with good social support</li>
+                    <li><strong>Not suitable for private surgery:</strong> under 18 months; significant medical conditions or high anaesthetic risk; patients without adequate social support</li>
+                  </ul>
+                  <p class="mt-2">Patients not suitable for private surgery can be referred to the public surgical waiting list at Hastings Hospital.</p>
+                </div>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">How long until surgery?</summary>
+                <p class="mt-2 text-sm text-muted-text">Urgent surgery (e.g., cancer) usually 1-2 weeks. Routine cases vary by waiting list, and we are happy to schedule surgeries for patients when it is convenient for them. We also maintain short-notice lists for constrained availability.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">What are your surgical outcomes and complications?</summary>
+                <div class="mt-2 text-sm text-muted-text">
+                  <p>Dr. Kennel audits his outcomes annually to ensure he is providing high quality care and to identify areas for improvement. Publishing this data allows patients to make informed decisions. Because patients have direct mobile access to him after surgery, he is personally aware of ED visits, readmissions, and post-operative issues that would often go unreported to the operating surgeon — so this data reflects a more complete picture than most published figures. Like all surgical data, context matters: surgeons who take on more complex cases may have higher complication rates simply because the cases are harder.</p>
+                  <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li>Traditional tonsillectomy return to operating theatre: 1.94%</li>
+                    <li>Traditional tonsillectomy readmission for pain or dehydration: 5.8%</li>
+                    <li>Coblation tonsillectomy post-operative bleed: 0%</li>
+                    <li>Coblation tonsillectomy readmission for pain or dehydration: 0%</li>
+                    <li>Mastoidectomy facial nerve injury: 0%</li>
+                    <li>Parotidectomy permanent facial nerve injury: 0% (temporary weakness following complex cancer surgery near the nerve has resolved in all cases)</li>
+                    <li>Parotidectomy sialocele (fluid collection): 20%</li>
+                    <li>Head &amp; neck cancer clear surgical margins: 92.9%</li>
+                    <li>Melanoma clear surgical margins: 100%</li>
+                    <li>Neck dissection lymph node yield: average 48, median 50</li>
+                    <li>Neck dissection major complications: 0%</li>
+                    <li>Skin cancer wound infection: 5.8%</li>
+                    <li>Non-skin surgical site infection: 1.6%</li>
+                    <li>30-day postoperative mortality: 0%</li>
+                  </ul>
+                  <p class="mt-3">Cholesteatoma recurrence can take 2–4 years to become apparent after surgery, so true long-term rates require extended follow-up. Dr. Kennel uses careful technique and Mesna irrigation to minimise recurrence risk, and planned MRI surveillance and second-look procedures are used where indicated. So far, his cholesteatoma recurrence rate is 7.5%</p>
+                </div>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Do you offer cosmetic procedures?</summary>
+                <p class="mt-2 text-sm text-muted-text">We focus on therapeutic procedures (e.g., Botox for facial pain, reconstructive skin cancer work). We do not offer cosmetic-only facelifts or rhinoplasty.</p>
+              </details>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-3 text-xl font-medium text-near-black">About the practice</h3>
+            <div class="space-y-2">
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Are there conditions you don't treat?</summary>
+                <div class="mt-2 text-sm text-muted-text">
+                  <p class="mb-2">We treat the full range of ENT conditions, but some things are better handled elsewhere:</p>
+                  <ul class="list-disc space-y-1 pl-5">
+                    <li><strong>Dizziness and balance disorders</strong> — referred to a specialist colleague</li>
+                    <li><strong>TMJ jaw pain</strong> — better managed by an oral and maxillofacial surgeon or dentist</li>
+                    <li><strong>Hearing aids</strong> — fitted by an audiologist; we can investigate the underlying cause but don't supply aids</li>
+                    <li><strong>Cochlear implants</strong> — performed at tertiary centres; we can advise and coordinate a referral</li>
+                    <li><strong>Vestibular schwannoma surgery</strong> — we follow and advise patients with these tumours but surgery or radiation is performed at a tertiary centre</li>
+                    <li><strong>Adult sleep apnoea surgery</strong> — surgical options are available and can be performed for self-paying patients, but most insurers don't cover this; check your policy before booking. Tonsillectomy for sleep-disordered breathing in children is a separate matter and is routinely covered.</li>
+                    <li><strong>Major head and neck cancer reconstruction</strong> — we work up and coordinate complex cancers but some major reconstructive surgery requires a tertiary centre</li>
+                    <li><strong>Cosmetic procedures</strong> — we focus on therapeutic outcomes; we don't offer cosmetic rhinoplasty or facelifts</li>
+                  </ul>
+                  <p class="mt-2">We also don't treat: complex nasal trauma requiring rib grafting, some professional voice dysphonia, paediatric airway, cleft lip/palate, or parathyroid surgery.</p>
+                </div>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Do you sell medical equipment?</summary>
+                <p class="mt-2 text-sm text-muted-text">Yes — we supply surgical microscopes and ENT equipment to clinicians, with low markup and transparent pricing. Contact Dr. Kennel with any inquiries.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Are you part of a wider group?</summary>
+                <p class="mt-2 text-sm text-muted-text">ENT & Allergy is an independent practice. Dr. Kennel shares facilities and an admin team with other ENT specialists at the Kaweka Specialist Centre, but each practice operates independently with separate bookings and billing. Clinic signage refers to the shared space as ENT Head &amp; Neck Hawke's Bay — if you're coming to see Dr. Kennel, follow signs for that or for his name.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">Do you see patients from outside Hawke's Bay?</summary>
+                <p class="mt-2 text-sm text-muted-text">Yes — patients from anywhere in New Zealand are welcome. Dr. Kennel regularly sees patients from Gisborne and Tairāwhiti, where there is currently no local ENT surgeon. Hastings is approximately 3 hours from Gisborne by road. GP referrals from outside the region are welcome.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="request" class="bg-white py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <h2 class="mb-3 text-2xl font-medium text-near-black">Request a consultation</h2>
+        <p class="mb-6 text-muted-text">Self-referrals and GP referrals both welcome.</p>
+        <form class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <label class="sm:col-span-2">
+            <span class="mb-1 block text-sm font-medium text-near-black">Name</span>
+            <input type="text" name="name" placeholder="Your name" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+          </label>
+          <label>
+            <span class="mb-1 block text-sm font-medium text-near-black">Email address</span>
+            <input type="email" name="email" placeholder="you@example.com" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+          </label>
+          <label>
+            <span class="mb-1 block text-sm font-medium text-near-black">Phone number</span>
+            <input type="tel" name="phone" placeholder="06 651 4070" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+          </label>
+          <label class="sm:col-span-2">
+            <span class="mb-1 block text-sm font-medium text-near-black">Reason for consultation</span>
+            <textarea name="reason" rows="4" placeholder="Tell us briefly what you're experiencing" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none"></textarea>
+          </label>
+          <button type="submit" class="sm:col-span-2 inline-flex items-center justify-center rounded-full bg-forest-green px-6 py-3 text-sm font-medium text-white transition hover:bg-[#244f3e]">
+            Submit request
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-near-black text-white">
+    <div class="mx-auto max-w-6xl px-4 py-8 md:px-6">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div class="text-sm text-gray-400">
+          <p>Kaweka Specialist Centre, 209 Canning Road, Hastings, Hawke's Bay</p>
+          <p>
+            <a href="tel:+6466514070" class="hover:text-white transition">06 651 4070</a>
+            &nbsp;·&nbsp; Monday–Friday 8:30 AM – 4:30 PM
+          </p>
+        </div>
+        <p class="text-sm text-gray-500">&copy; {new Date().getFullYear()} ENT &amp; Allergy Limited</p>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
