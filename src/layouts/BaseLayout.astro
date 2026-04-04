@@ -11,9 +11,13 @@ const { title = 'ENT & Allergy | Ear, Nose & Throat Specialist | Hawke\'s Bay' }
     <link rel="canonical" href="https://entallergy.nz/" />
     <meta name="msvalidate.01" content="3D5C1B48B041F0C6FD731154E43259A4" />
     <link rel="icon" href="/images/logo/favicon.png" type="image/png" />
+    <link rel="preload" as="image" href="/images/hero/hero-temata.jpg" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Load Google Fonts non-blocking -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Gotu&family=DM+Sans:wght@400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Gotu&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" /></noscript>
   </head>
   <body class="bg-off-white text-near-black antialiased">
     <style is:global>
