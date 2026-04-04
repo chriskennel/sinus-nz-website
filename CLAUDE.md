@@ -124,6 +124,21 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 - Google Search Console and Bing Webmaster Tools submitted
 - Pending: Google Business Profile setup linked to entallergy.nz; add Gisborne/Tairāwhiti as service area
 
+## Nav Glassmorphism (src/components/Nav.astro)
+- Nav starts fully opaque (`rgb(26,26,26)`) at top of page
+- Smoothly interpolates to 75% opacity (`rgba(26,26,26,0.75)`) over first 200px of scroll
+- Controlled via inline style set by JS scroll listener — no Tailwind class toggling (avoids flash)
+- `backdrop-blur-md` always active; blur only visible once opacity drops
+- Mobile hamburger menu background remains solid `bg-near-black` (separate div)
+
+## Easter Egg (src/pages/index.astro, About section)
+- Headshot wrapper: `id="headshot-wrap"`, `overflow-hidden rounded-lg`
+- Professional headshot: normal flow, fades out on desktop hover (`group-hover:opacity-0`)
+- Easter egg image (`id="easter-egg"`): `absolute inset-0 h-full w-full object-cover`, fades in on hover
+- On mobile: tap triggers 2-second reveal via JS (`touchstart` → add `!opacity-100` → setTimeout 2000ms → remove)
+- Easter egg image: `public/images/dr-kennel/dr-kennel-easter-egg.jpg` (compressed from 1.9MB to 168KB via sips)
+- Content: "Hats off to You — Dr Kennel, 2nd best surgeon of the day, Kaweka, 7/9/23"
+
 ## Design Decisions (from prior session)
 - Hero image is intentionally **black & white** — distinctive against colour-heavy competitor sites; green CTA button pops more against monochromatic background
 - Condition category cards use David sculpture JPG images with black backgrounds (not transparent PNGs) — black provides more visual weight, prevents washed-out look
