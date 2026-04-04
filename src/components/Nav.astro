@@ -8,7 +8,7 @@ const links = [
   { href: '#request', label: 'Consult' },
 ];
 ---
-<nav class="fixed inset-x-0 top-0 z-40 bg-near-black/95 backdrop-blur-md">
+<nav id="main-nav" class="fixed inset-x-0 top-0 z-40 backdrop-blur-md" style="background-color: rgb(26,26,26)">
   <input id="nav-toggle" type="checkbox" class="peer sr-only" />
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-1 md:px-6">
     <a href="#hero" class="flex items-center gap-2">
@@ -53,4 +53,15 @@ const links = [
       if (toggle) toggle.checked = false;
     });
   });
+
+  const nav = document.getElementById('main-nav');
+  if (nav) {
+    const updateNav = () => {
+      const maxScroll = 200;
+      const alpha = Math.max(0.75, 1 - (window.scrollY / maxScroll) * 0.25);
+      nav.style.backgroundColor = `rgba(26, 26, 26, ${alpha})`;
+    };
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  }
 </script>
