@@ -91,18 +91,26 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 
 ## Consultation Form (section id="request")
 - Intro text: "For patients with an ongoing ENT condition or seeking specialist surgical assessment."
-- Fields: Name, Email, Phone, Condition or procedure of interest (dropdown), Reason for consultation (textarea, 3 rows)
-- Dropdown options are surgery-oriented — excludes tinnitus, dizziness, allergy as standalone choices:
-  - Hearing loss or ear drum problem
-  - Chronic ear disease or cholesteatoma
-  - Chronic sinusitis or nasal polyps
-  - Deviated septum or nasal obstruction
-  - Tonsil or adenoid problems
-  - Swallowing difficulty
-  - Neck lump or mass
-  - Skin cancer — face or neck
-  - Not sure / other
+- Fields: Name, Email, Phone, Condition or procedure of interest (dropdown), Reason for consultation (textarea, 3 rows), Photos or files (optional, accepts image/*/pdf/doc/docx, multiple)
 - Textarea placeholder: "Briefly describe your condition or any relevant test results."
+- File upload note: "You may attach photos of a skin lesion, imaging reports, or other relevant test results. Transmitted securely."
+- Dropdown ordered by surgical value — ear surgery first, allergy/nosebleeds near end:
+  1. Chronic ear disease or cholesteatoma
+  2. Otosclerosis or hereditary hearing loss
+  3. Conductive hearing loss or perforated eardrum
+  4. Surfer's ear or ear canal narrowing
+  5. Glue ear or grommets
+  6. Chronic sinusitis or nasal polyps
+  7. Deviated septum, turbinates or nasal obstruction
+  8. Neck lump, mass, tumour or cancer
+  9. Skin cancer or lesion — face or neck
+  10. Parotid or salivary gland lump (near jaw or ear)
+  11. Tonsil or adenoid problems
+  12. Implantable hearing device (Osia / BAHA)
+  13. Allergic rhinitis or hay fever (inhalational)
+  14. Recurrent nosebleeds (epistaxis)
+  15. Swallowing difficulty
+  16. Not sure / other
 
 ## FAQ Structure (4 groups)
 1. **Before your visit** — referral, preparation, wait times, rescheduling, parking
@@ -112,7 +120,31 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 
 ## Hero Text (current)
 - Heading: "We're here to help"
-- Subheader: "Advanced ENT Surgery in Hawke's Bay. Specialised care for Ear, Sinus, and Head & Neck conditions with 24/7 direct surgeon access."
+- Subheader: "Advanced ENT surgery in Hawke's Bay. Specialised care for Ear, Sinus, and Head & Neck conditions with 24/7 direct surgeon access."
+- Note: "Surgery" intentionally lowercase to avoid reading as a business name; "Ear/Sinus/Head & Neck" capitalised to mirror section names
+
+## Condition Chips (expandable cards)
+- All sections use JS to make the entire card clickable, not just label text (script in index.astro)
+- Mobile +/− indicator injected via JS at opacity `/20` (`text-forest-green/20`) — hidden on `md+`
+- Surgical differentiators added to expanded text:
+  - **Cholesteatoma**: endoscopic approaches, topical medications to reduce recurrence
+  - **Surfer's ear**: single packing at surgery, no repeated post-op packing changes
+  - **Otosclerosis**: fellowship-trained, sub-millimetre microscopic technique with laser
+  - **Perforated eardrum**: minimal access, most repairs through ear canal without external incision
+  - **Chronic sinusitis**: full spectrum including frontal sinus and CSF leak repair; image-guided navigation using patient's own CT/MRI
+  - **Facial skin lesions**: flaps and grafts for complex reconstruction
+  - **Epistaxis**: in-clinic cauterisation + SPA ligation under GA for anticoagulated patients
+  - **Hearing loss/grommets**: "ventilation tube" terminology added; topical (not local) anaesthetic for adults
+- Nose section card subtitle: "Sinusitis, polyps, septoplasty, allergies" (coblation tonsillectomy removed — belongs in throat)
+- Head & neck cancer: "co-managed with tertiary centres" wording (not "referred") for laryngectomy/free-flap cases
+- Facial skin lesions: BCC/SCC spelled out in full with abbreviations in parentheses
+
+## Surgical Outcomes FAQ (id="faq-outcomes")
+- `<details>` element has `id="faq-outcomes"` for direct linking
+- Outcomes panel "Full figures in the FAQ" links to `#faq-outcomes` and auto-opens it via JS
+- Cholesteatoma recurrence: 7.5% — monitored as follow-up accumulates (not benchmarked against published rates)
+- "Most complete picture possible" → "more complete picture than is typically available"
+- Mesna replaced with "specialised dissection methods"
 
 ## Meta Description (current)
 - "Dr. Chris Kennel FRACS — sinus surgery, septoplasty, advanced ear surgery & head & neck cancer specialist in Hastings, Hawke's Bay. Coblation tonsillectomy, stapes, parotid surgery. Self-referrals welcome."
