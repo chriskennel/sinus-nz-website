@@ -191,7 +191,61 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 
 ## Practice Details
 - **Dr. Chris Kennel** — FRACS, Diplomate of the American Board of Otolaryngology — Head & Neck Surgery
-- Location: Kaweka Specialist Centre, 209 Canning Road, Hastings
+- Location: Kaweka Specialist Centre, 209 Canning Road, Hastings, Hawke's Bay 4120
 - Shared space signage: **ENT Head & Neck Hawke's Bay**
 - Phone: 06 651 4070
 - Hours: Monday–Friday 8:30 AM – 4:30 PM
+
+## Email
+- **Zoho Mail Lite** (NZ$2/month) — `chris@entallergy.nz`
+- Forwards to `christopher.kennel@kawekahealth.nz`
+- Used primarily for Google Business Profile verification and as a fallback address
+- DNS records at 1stDomains: MX (mx.zoho.com.au priority 10/20/50), SPF TXT, DKIM TXT (zmail._domainkey)
+- DKIM may still be propagating — check Zoho DNS Mapping if issues arise
+
+## Google Business Profile (GBP)
+- Setup initiated but **pending email verification** as of April 2026
+- Verification email sent to `chris@entallergy.nz` — check Zoho inbox and spam
+- Once verified: business name "ENT & Allergy" will appear in Google search results instead of domain
+- Will enable Google Maps listing and Knowledge Panel
+- Add Gisborne/Tairāwhiti as service area when setting up
+- Upload headshot as cover photo, ENTA logo as profile icon, 2–3 Kaweka Specialist Centre photos
+
+## Structured Data (src/layouts/BaseLayout.astro)
+- Two JSON-LD blocks: `["Physician", "MedicalBusiness"]` and `FAQPage`
+- Physician block includes: FRACS + American Board credentials, procedures (availableService), knowsAbout list, address with postcode 4120, areaServed Hawke's Bay + Gisborne/Tairāwhiti
+- FAQPage block: 10 questions ordered for surgical intent — referral → surgery wait → direct surgeon access → outcomes → cost → appointment wait → ACC → first consultation → outside HB → conditions not treated → public list (last)
+- Validated at Google Rich Results Test — green checkmark, 4 non-critical optional field warnings on nested physician entity (acceptable)
+
+## Open Graph & Social Sharing (src/layouts/BaseLayout.astro)
+- `og:image` → headshot `/images/dr-kennel/dr-kennel.jpg` (800×1000)
+- `og:title`, `og:description`, `og:url`, `og:type` all set
+- Twitter/X Card: `summary_large_image` with same title, description, image
+- Controls preview image/text when site is shared via iMessage, WhatsApp, LinkedIn, X
+
+## AI Search Optimisation
+- `public/llms.txt` — plain text file for AI crawlers (ChatGPT, Perplexity, etc.)
+- Contains: About, Practice details, Credentials, Surgical Specialties, Audited Outcomes, Key Differentiators
+- Standard llms.txt format (Markdown headings)
+
+## Favicon
+- Upgraded from 32×32px to 512×512px (generated from `ENTA logo solid tragus_Black on transparent.svg` via qlmanage)
+- 512×512 meets Google's minimum for search result icons
+- Black on transparent — displays well on Google's white background
+
+## Performance (Core Web Vitals)
+- Desktop PageSpeed: ~95
+- Mobile PageSpeed: 70 (hero image weight is main factor)
+- Hero image: `hero-temata.jpg` compressed with MozJPEG (~16% saving) — already at 1411px wide, further resize not beneficial
+- WebP not available on this macOS version via sips — would require Squoosh/Photoshop
+- Condition images: 800px width — correct for retinal displays, do not resize
+- Non-blocking Google Fonts: `media="print" onload="this.media='all'"`
+- `fetchpriority="high"` on hero preload link
+
+## FAQ Updates (src/pages/index.astro)
+- New question added to Surgery group: "Is it really OK to call or text my surgeon directly?"
+  - Leads with family health experience line from bio (humanises the policy)
+  - "He also uses patient feedback to continuously refine his care and track outcomes."
+  - Closes: "Call or text any time — he may not respond immediately if he is operating or in a situation where his phone is unavailable, but leave a message and he will get back to you."
+- "Do you see patients from outside Hawke's Bay?" moved to first item in About the Practice group
+- "Do you sell medical equipment?" moved to last item in About the Practice group
