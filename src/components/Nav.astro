@@ -49,8 +49,8 @@ const links = [
 <script>
   document.getElementById('mobile-menu')?.addEventListener('click', (e) => {
     if ((e.target as Element).closest('a')) {
-      const toggle = document.getElementById('nav-toggle') as HTMLInputElement | null;
-      if (toggle) toggle.checked = false;
+      const label = document.querySelector('label[for="nav-toggle"]') as HTMLElement | null;
+      if (label) label.click();
     }
   });
 
