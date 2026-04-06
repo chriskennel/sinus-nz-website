@@ -23,14 +23,14 @@ He is the only FRACS (ORL) surgeon based in Hawke's Bay. He regularly sees patie
 - Contract surgeon for Health New Zealand
 
 ## Surgical Specialties
-- Otology and neurotology: stapedectomy, mastoidectomy, tympanoplasty, myringoplasty, cholesteatoma surgery, canalplasty (surfer's ear), Osia implant / bone anchored hearing device
-- Rhinology and sinus surgery: functional endoscopic sinus surgery (FESS), septoplasty, turbinate reduction, nasal polyp surgery, image-guided navigation surgery
-- Head and neck surgery: neck dissection, parotid surgery (facelift approach), transoral Zenker's diverticulum surgery, salivary gland surgery
+- Otology and neurotology: stapedectomy, stapedotomy, mastoidectomy, tympanoplasty, myringoplasty, cholesteatoma surgery, canalplasty (surfer's ear / exostoses), Osia implant / bone anchored hearing device, tympanic membrane perforation repair, ossiculoplasty, pre-auricular cyst excision
+- Rhinology and sinus surgery: functional endoscopic sinus surgery (FESS) including frontal sinus drill out or Carolyn's window, septoplasty, turbinate reduction, nasal polyp surgery, image-guided navigation surgery
+- Head and neck surgery: neck dissection, parotid surgery (facelift approach), transoral Zenker's diverticulum surgery, salivary gland surgery, cricopharyngeal myotomy, excisional biopsies, lymph node excisions, branchial cleft cyst excisions
 - Head and neck oncology: cancer surgery, clear margin rates published annually
-- Skin cancer surgery: BCC, SCC, facial reconstruction with flaps and grafts
-- Throat surgery: coblation tonsillectomy, adenotonsillectomy
+- Skin cancer surgery: Basal cell carcinoma (BCC), squamous cell carcinoma (SCC), melanoma, benign lesions, facial reconstruction with flaps and grafts, blepharoplasty
+- Throat surgery: coblation tonsillectomy, adenotonsillectomy, Botox for retrograde cricopharyngeal dysfunction (R-CPD)
 - Hearing devices: Osia surgically implanted hearing device (one of the first surgeons in New Zealand to implant this device)
-- In-clinic procedures: nasal endoscopy, flexible laryngoscopy, nasal cautery, ear microsuction, ultrasound-guided fine needle aspiration (FNA) biopsy, audiometry, allergy skin testing
+- In-clinic procedures: nasal endoscopy, flexible laryngoscopy, nasal cautery, ear microsuction, ultrasound-guided fine needle aspiration (FNA) biopsy, nerve blocks, Botox for dystonia or sialorrhea, skin lesion and cancer excisions, ear ventilation tubes (grommets), 
 
 ## Audited Surgical Outcomes (November 2025)
 - Coblation tonsillectomy readmission (bleeding, pain, dehydration): 0%

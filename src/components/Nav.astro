@@ -35,7 +35,7 @@ const links = [
     </div>
   </div>
 
-  <div class="hidden max-md:peer-checked:block border-t border-gray-800 bg-near-black">
+  <div id="mobile-menu" class="hidden max-md:peer-checked:block border-t border-gray-800 bg-near-black">
     <div class="flex flex-col gap-1 px-4 py-3">
       {links.map((item) => (
         <a href={item.href} class="nav-link rounded-md px-3 py-2 text-base font-medium text-white transition hover:bg-gray-900/70 hover:text-green-100">
@@ -47,11 +47,11 @@ const links = [
 </nav>
 
 <script>
-  document.querySelectorAll('.nav-link').forEach((link) => {
-    link.addEventListener('click', () => {
+  document.getElementById('mobile-menu')?.addEventListener('click', (e) => {
+    if ((e.target as Element).closest('a')) {
       const toggle = document.getElementById('nav-toggle') as HTMLInputElement | null;
       if (toggle) toggle.checked = false;
-    });
+    }
   });
 
   const nav = document.getElementById('main-nav');
