@@ -163,11 +163,21 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 - `backdrop-blur-md` always active; blur only visible once opacity drops
 - Mobile hamburger menu background remains solid `bg-near-black` (separate div)
 
+## Nav Hamburger (src/components/Nav.astro)
+- Uses `<button id="nav-hamburger">` (NOT a CSS checkbox/label pattern — that caused iOS tap-area and close bugs)
+- Menu visibility toggled by JS: `classList.toggle('hidden')` on `#mobile-menu`
+- Closing on nav link click: `document.querySelectorAll('.nav-link')` → `classList.add('hidden')`
+- Hamburger tap area: `py-2 pr-2 pl-6` (extended left padding for easier mobile tapping)
+- "Consult" link styled as green pill on desktop: `bg-forest-green rounded-full px-4 py-1.5`; plain white in mobile menu
+- `scroll-margin-top`: `section[id]` = 64px, `details[id]` = 80px (FAQ items need extra clearance)
+
 ## Easter Egg (src/pages/index.astro, About section)
 - Headshot wrapper: `id="headshot-wrap"`, `overflow-hidden rounded-lg`
-- Professional headshot: normal flow, fades out on desktop hover (`group-hover:opacity-0`)
-- Easter egg image (`id="easter-egg"`): `absolute inset-0 h-full w-full object-cover`, fades in on hover
-- On mobile: tap triggers 2-second reveal via JS (`touchstart` → add `!opacity-100` → setTimeout 2000ms → remove)
+- Professional headshot (`img:not(#easter-egg)`): fades out on desktop hover (`group-hover:opacity-0`)
+- Easter egg image (`id="easter-egg"`): `absolute inset-0 h-full w-full object-cover`, fades in on desktop hover
+- On mobile: tap (not swipe) triggers 2-second reveal — distinguished by tracking touchmove > 8px
+- iOS sticky hover fix: both images controlled with `!opacity-0`/`!opacity-100` throughout the cycle — never rely on removing a class alone, always force the opposite state
+- On tap: headshot → `!opacity-0`, egg → `!opacity-100`; after 2s: egg → `!opacity-0`, headshot → `!opacity-100`
 - Easter egg image: `public/images/dr-kennel/dr-kennel-easter-egg.jpg` (compressed from 1.9MB to 168KB via sips)
 - Content: "Hats off to You — Dr Kennel, 2nd best surgeon of the day, Kaweka, 7/9/23"
 
@@ -184,7 +194,6 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 
 ## Known Issues / Design Decisions
 - `bg-fixed` (CSS parallax) disabled on mobile due to iOS Safari bug — JS parallax used instead (in `Hero.astro`)
-- Hamburger menu uses CSS peer checkbox pattern — checkbox must be a direct sibling of the mobile menu div
 - Sticky CTA uses `env(safe-area-inset-bottom)` to clear iOS address bar
 - Sticky CTA hides when hero section OR request section is visible (threshold: 0)
 - Google Maps iframe requires `frame-src https://www.google.com` in CSP
