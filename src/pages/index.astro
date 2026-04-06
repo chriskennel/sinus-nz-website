@@ -748,9 +748,11 @@ import TrustBar from '../components/TrustBar.astro';
       }, { passive: true });
       wrap.addEventListener('touchend', () => {
         if (moved || timer) return;
+        egg.classList.remove('!opacity-0');
         egg.classList.add('!opacity-100');
         timer = setTimeout(() => {
           egg.classList.remove('!opacity-100');
+          egg.classList.add('!opacity-0');
           timer = null;
         }, 2000);
       });
