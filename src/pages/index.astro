@@ -731,7 +731,8 @@ import TrustBar from '../components/TrustBar.astro';
     // Easter egg: tap headshot on mobile for a 2-second reveal
     const wrap = document.getElementById('headshot-wrap');
     const egg = document.getElementById('easter-egg');
-    if (wrap && egg) {
+    const headshot = wrap?.querySelector('img:not(#easter-egg)') as HTMLElement | null;
+    if (wrap && egg && headshot) {
       let timer: ReturnType<typeof setTimeout> | null = null;
       let startX = 0;
       let startY = 0;
@@ -748,11 +749,15 @@ import TrustBar from '../components/TrustBar.astro';
       }, { passive: true });
       wrap.addEventListener('touchend', () => {
         if (moved || timer) return;
+        headshot.classList.remove('!opacity-100');
+        headshot.classList.add('!opacity-0');
         egg.classList.remove('!opacity-0');
         egg.classList.add('!opacity-100');
         timer = setTimeout(() => {
           egg.classList.remove('!opacity-100');
           egg.classList.add('!opacity-0');
+          headshot.classList.remove('!opacity-0');
+          headshot.classList.add('!opacity-100');
           timer = null;
         }, 2000);
       });
