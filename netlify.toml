@@ -44,6 +44,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "https://entsurgeon.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.entsurgeon.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
