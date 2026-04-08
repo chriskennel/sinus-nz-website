@@ -8,6 +8,42 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "https://otologist.nz/*"
+  to = "https://entallergy.nz/#ear"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.otologist.nz/*"
+  to = "https://entallergy.nz/#ear"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://otology.nz/*"
+  to = "https://entallergy.nz/#ear"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.otology.nz/*"
+  to = "https://entallergy.nz/#ear"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://rhinology.nz/*"
+  to = "https://entallergy.nz/#nose"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.rhinology.nz/*"
+  to = "https://entallergy.nz/#nose"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]

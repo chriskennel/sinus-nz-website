@@ -591,9 +591,14 @@ import TrustBar from '../components/TrustBar.astro';
             <h3 class="mb-3 text-xl font-medium text-near-black">About the practice</h3>
             <div class="space-y-2">
               <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
+                <summary class="cursor-pointer font-normal text-near-black">What is ENT Head &amp; Neck Hawke's Bay?</summary>
+                <p class="mt-2 text-sm text-muted-text">ENT Head &amp; Neck Hawke's Bay is the name of the shared clinic space at the Kaweka Specialist Centre, used by a group of ENT specialists who share facilities, reception, and an admin team — so if you've called or emailed us, you've already been in touch with the right people. The clinic is used for both private consultations and public (Health New Zealand) ENT services. Hearing &amp; Balance audiology is also located within the same suite. <strong>ENT &amp; Allergy</strong> is Dr. Kennel's independent private practice within that group — he has separate bookings and billing from his colleagues. When you arrive, follow signs to <strong>ENT Head &amp; Neck Hawke's Bay</strong>.</p>
+              </details>
+              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
                 <summary class="cursor-pointer font-normal text-near-black">Do you see patients from outside Hawke's Bay?</summary>
                 <p class="mt-2 text-sm text-muted-text">Yes — patients from anywhere in New Zealand are welcome. Dr. Kennel regularly sees patients from Gisborne and Tairāwhiti, where there is currently no local ENT surgeon. New consultations require an in-person visit; some follow-up appointments can be handled virtually. GP referrals from outside the region are welcome.</p>
               </details>
+
               <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
                 <summary class="cursor-pointer font-normal text-near-black">Are there conditions you don't treat?</summary>
                 <div class="mt-2 text-sm text-muted-text">
@@ -610,10 +615,6 @@ import TrustBar from '../components/TrustBar.astro';
                   </ul>
                   <p class="mt-2">We also don't treat: complex nasal trauma requiring rib grafting, some professional voice dysphonia, advanced paediatric airway, cleft lip/palate, or parathyroid surgery.</p>
                 </div>
-              </details>
-              <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
-                <summary class="cursor-pointer font-normal text-near-black">Are you part of a wider group?</summary>
-                <p class="mt-2 text-sm text-muted-text">ENT & Allergy is an independent practice. Dr. Kennel shares facilities and an admin team with other ENT specialists at the Kaweka Specialist Centre, but each practice operates independently with separate bookings and billing. Clinic signage refers to the shared space as <strong>ENT Head &amp; Neck Hawke's Bay</strong> — if you're coming to see Dr. Kennel, follow signs for that or his name.</p>
               </details>
               <details class="rounded-lg border border-border bg-white p-4 transition hover:border-forest-green hover:shadow-sm">
                 <summary class="cursor-pointer font-normal text-near-black">Do you sell medical equipment?</summary>
@@ -668,7 +669,7 @@ import TrustBar from '../components/TrustBar.astro';
           </label>
           <label class="sm:col-span-2">
             <span class="mb-1 block text-sm font-medium text-near-black">Reason for consultation</span>
-            <textarea name="reason" rows="3" placeholder="Briefly describe your condition or any relevant test results." class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none"></textarea>
+            <textarea name="reason" rows="3" placeholder="Briefly describe your condition and/or any relevant test results." class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none"></textarea>
           </label>
           <label class="sm:col-span-2">
             <span class="mb-1 block text-sm font-medium text-near-black">Photos or files <span class="font-normal text-muted-text">(optional)</span></span>

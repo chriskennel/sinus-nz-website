@@ -5,10 +5,32 @@ A single-page Astro + Tailwind CSS website for Dr. Chris Kennel, FRACS ENT surge
 
 ## Domains
 - **Primary:** `entallergy.nz` (and `www.entallergy.nz`)
-- `sinus.nz` → redirects to `entallergy.nz/#nose` (via Netlify redirect in `netlify.toml`)
-- `entallergy.co.nz`, `enta.nz`, `allergyhb.nz`, `allergyhb.com` → all redirect to `entallergy.nz` (via 1stDomains URL Redirection)
 - Domain registrar: **1stDomains** (1stdomains.nz)
 - DNS for `entallergy.nz`: A record `75.2.60.5` (Netlify load balancer), CNAME `www` → `entallergy.nz`
+
+### Netlify redirects (deep-link, via `netlify.toml` + Netlify domain alias)
+These domains require DNS pointed to Netlify (A `75.2.60.5`, CNAME `www` → `entallergy.nz`) AND added as domain aliases in Netlify dashboard:
+- `sinus.nz` → `entallergy.nz/#nose` ✅ configured
+- `otologist.nz` → `entallergy.nz/#ear` (netlify.toml done; DNS + alias pending)
+- `otology.nz` → `entallergy.nz/#ear` (netlify.toml done; DNS + alias pending)
+- `rhinology.nz` → `entallergy.nz/#nose` (netlify.toml done; DNS + alias pending)
+
+### 1stDomains URL Redirection (simple root redirects, no Netlify involvement)
+- `entallergy.co.nz` → `entallergy.nz` ✅
+- `enta.nz` → `entallergy.nz` ✅
+- `allergyhb.nz` → `entallergy.nz` ✅ (expires Jun 2, 2026 — review whether to renew)
+- `allergyhb.com` → `entallergy.nz` ✅ (expires Jun 2, 2026 — review whether to renew)
+- `entsurgeon.nz` → `entallergy.nz` (pending)
+- `otolaryngologist.nz` → `entallergy.nz` (pending)
+- `otolaryngologist.co.nz` → `entallergy.nz` (pending)
+- `chriskennel.nz`, `chriskennel.co.nz`, `chriskennel.kiwi` → `entallergy.nz` (pending)
+- `christopherkennel.nz`, `christopherkennel.co.nz`, `christopherkennel.kiwi`, `christopherkennel.com` → `entallergy.nz` (pending)
+
+### Domain notes
+- All 301 redirects pass link equity to `entallergy.nz` — alternate domains don't appear separately in search results
+- Deep-link domains (otologist, rhinology, sinus) are useful for printed materials/referral pads — drop patients directly into the relevant section
+- `.kiwi` TLD domains have low recognition — let lapse at renewal (Apr 7, 2027)
+- `otolaryngology.nz` — marginal value alongside `.co.nz` variant, consider dropping at renewal
 
 ## Hosting
 - **Netlify** (paid personal plan)
