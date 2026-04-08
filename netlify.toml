@@ -56,6 +56,102 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "https://otolaryngologist.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.otolaryngologist.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://otolaryngologist.co.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.otolaryngologist.co.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://otolaryngology.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.otolaryngology.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://chriskennel.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.chriskennel.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://chriskennel.co.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.chriskennel.co.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://christopherkennel.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.christopherkennel.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://christopherkennel.co.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.christopherkennel.co.nz/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://christopherkennel.com/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.christopherkennel.com/*"
+  to = "https://entallergy.nz"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
