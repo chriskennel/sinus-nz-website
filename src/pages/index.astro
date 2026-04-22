@@ -651,13 +651,17 @@ import TrustBar from '../components/TrustBar.astro';
         <form name="consultation-request" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <input type="hidden" name="form-name" value="consultation-request" />
           <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
-          <label class="sm:col-span-2">
+          <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Name</span>
-            <input type="text" name="name" placeholder="Your name" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+            <input type="text" name="name" required placeholder="Your name" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Email address</span>
-            <input type="email" name="email" placeholder="you@example.com" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+            <input type="email" name="email" required placeholder="you@example.com" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+          </label>
+          <label>
+            <span class="mb-1 block text-sm font-medium text-near-black">Date of birth</span>
+            <input type="date" name="dob" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Phone number</span>
@@ -692,11 +696,12 @@ import TrustBar from '../components/TrustBar.astro';
           <label class="sm:col-span-2">
             <span class="mb-1 block text-sm font-medium text-near-black">Photos or files <span class="font-normal text-muted-text">(optional)</span></span>
             <input type="file" name="attachments" multiple accept="image/*,.pdf,.doc,.docx" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none file:mr-3 file:rounded-full file:border-0 file:bg-forest-green file:px-3 file:py-1 file:text-xs file:font-medium file:text-white hover:file:bg-[#244f3e]" />
-            <p class="mt-1 text-xs text-muted-text">You may attach photos of a skin lesion, condition, imaging reports, or other relevant test results. Transmitted securely.</p>
+            <p class="mt-1 text-xs text-muted-text">You may attach photos of a skin lesion, condition, imaging reports, or other relevant test results. Maximum 10 MB total. Transmitted securely.</p>
           </label>
           <button type="submit" class="sm:col-span-2 inline-flex items-center justify-center rounded-full bg-forest-green px-6 py-3 text-sm font-medium text-white transition hover:bg-[#244f3e]">
             Submit request
           </button>
+          <p class="sm:col-span-2 text-center text-xs text-muted-text">Your information is used only to arrange your care and is handled in accordance with the Privacy Act 2020.</p>
         </form>
 
       </div>
@@ -706,12 +711,12 @@ import TrustBar from '../components/TrustBar.astro';
       <div class="mx-auto max-w-6xl px-4 md:px-6">
         <h2 class="mb-3 text-2xl font-medium text-near-black">Referring a patient?</h2>
         <p class="mb-6 text-muted-text">For GPs and other clinicians. Routine and urgent referrals accepted. For urgent suspected cancer, call the rooms directly on <a href="tel:+6466514070" class="text-forest-green hover:underline font-medium">06 651 4070</a>.</p>
-        <form name="clinician-referral" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <form name="clinician-referral" method="POST" action="/success-referral" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <input type="hidden" name="form-name" value="clinician-referral" />
           <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Referring clinician</span>
-            <input type="text" name="clinician-name" placeholder="Dr. Jane Smith" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+            <input type="text" name="clinician-name" required placeholder="Dr. Jane Smith" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Practice or clinic</span>
@@ -719,7 +724,7 @@ import TrustBar from '../components/TrustBar.astro';
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Your contact email</span>
-            <input type="email" name="clinician-email" placeholder="you@practice.nz" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+            <input type="email" name="clinician-email" required placeholder="you@practice.nz" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Your contact phone</span>
@@ -727,11 +732,15 @@ import TrustBar from '../components/TrustBar.astro';
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Patient name</span>
-            <input type="text" name="patient-name" placeholder="Patient full name" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+            <input type="text" name="patient-name" required placeholder="Patient full name" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Patient NHI <span class="font-normal text-muted-text">(optional)</span></span>
             <input type="text" name="patient-nhi" placeholder="e.g. ZZZ0016" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
+          </label>
+          <label>
+            <span class="mb-1 block text-sm font-medium text-near-black">Patient date of birth</span>
+            <input type="date" name="patient-dob" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
           <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Patient phone number</span>
@@ -741,7 +750,7 @@ import TrustBar from '../components/TrustBar.astro';
             <span class="mb-1 block text-sm font-medium text-near-black">Patient email address <span class="font-normal text-muted-text">(preferred)</span></span>
             <input type="email" name="patient-email" placeholder="patient@example.com" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none" />
           </label>
-          <label class="sm:col-span-2">
+          <label>
             <span class="mb-1 block text-sm font-medium text-near-black">Urgency</span>
             <select name="urgency" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none">
               <option value="" disabled selected>Select urgency…</option>
@@ -757,10 +766,12 @@ import TrustBar from '../components/TrustBar.astro';
           <label class="sm:col-span-2">
             <span class="mb-1 block text-sm font-medium text-near-black">Attach referral letter or results <span class="font-normal text-muted-text">(optional)</span></span>
             <input type="file" name="attachments" multiple accept="image/*,.pdf,.doc,.docx" class="w-full rounded border border-border bg-white px-3 py-2 text-sm text-near-black focus:border-forest-green focus:outline-none file:mr-3 file:rounded-full file:border-0 file:bg-forest-green file:px-3 file:py-1 file:text-xs file:font-medium file:text-white hover:file:bg-[#244f3e]" />
+            <p class="mt-1 text-xs text-muted-text">Maximum 10 MB total.</p>
           </label>
           <button type="submit" class="sm:col-span-2 inline-flex items-center justify-center rounded-full bg-forest-green px-6 py-3 text-sm font-medium text-white transition hover:bg-[#244f3e]">
             Submit referral
           </button>
+          <p class="sm:col-span-2 text-center text-xs text-muted-text">Patient information is handled in accordance with the Health Information Privacy Code 2020.</p>
         </form>
       </div>
     </section>
