@@ -33,7 +33,7 @@ He is the only FRACS (ORL) surgeon based in Hawke's Bay. He regularly sees patie
 - In-clinic procedures: nasal endoscopy, flexible laryngoscopy, nasal cautery, ear microsuction, ultrasound-guided fine needle aspiration (FNA) biopsy, nerve blocks, Botox for dystonia or sialorrhea, skin lesion and cancer excisions, ear ventilation tubes (grommets), 
 
 ## Audited Surgical Outcomes (November 2025)
-- Coblation tonsillectomy readmission (bleeding, pain, dehydration): 0%
+- Post-tonsillectomy return to theatre (all techniques, 3 in 196 cases): 1.5%
 - Mastoidectomy facial nerve injury: 0%
 - Parotidectomy permanent facial nerve injury: 0%
 - Head & neck cancer clear surgical margins: 92.9%

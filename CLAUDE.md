@@ -101,7 +101,7 @@ All redirect rules live in `netlify.toml` — there is no redirect UI in Netlify
 
 ## Surgical Outcomes Panel (in index.astro, "Why Choose" section)
 - Compact callout box above the Why Choose grid
-- 4 stats: 0% coblation tonsillectomy readmission, 1.6% operating theatre infection rate, 92.9% H&N cancer clear margins, 94.7% non-melanoma skin cancer clear margins
+- 4 stats: 1.5% post-tonsillectomy return to theatre (3 in 196 cases, all techniques), 1.6% operating theatre infection rate, 92.9% H&N cancer clear margins, 94.7% non-melanoma skin cancer clear margins
 - Label: "Audited surgical outcomes — published annually (November 2025)"
 - Note below stats points to full figures in FAQ
 
